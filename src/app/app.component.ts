@@ -7,6 +7,76 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tasinmaz-frontend';
+}
+
+interface IProduct{
+  Name:string;
+  Price:number;
+  sayHello():string;
+}
+
+class Car implements IProduct{
+  Name: string="Telefon";
+  Price: number=49999;
+
+  constructor(name:string,price:number){
+    this.Name=name;
+    this.Price=price;
+  }
+  sayHello(): string {
+    return "Merhaba";
+  }
+
+}
+
+/*
+class Product{
+
+  // Fields
+  name:string;
+  price:number;
+  category:string;
+  isPublish:boolean;
+
+  // Constructor
+  constructor(name:string,price:number,category:string,isPublish:boolean){
+    this.name=name;
+    this.price=price;
+    this.category=category;
+    this.isPublish=isPublish;
+  }
+
+  // Methods
+  // Topla(a1:number,a2:number):number // bişey dönmeyeceksek void yazılır
+  // {
+  //   let b1=10;
+  //   let b2=15;
+  //   return a1+a2;
+  // }
+
+  topla(a1:number,a2:number):number{
+    return a1+a2;
+  }
+
+
+}
+  
+class Product2 extends Product{ // miras alma işleminde extends kullanılır
+
+  // public -> her yerden erişilebilir
+  // private -> sadece tanımlandığı sınıfın içinde erişilebilir
+  // protected -> tanımlandığı sınıf ve o sınıftan türeyen sınıflarda erişilebilir
+
+  constructor(name:string,price:number,category:string,isPublish:boolean,farkliParametre:Date){
+    super(name,price,category,isPublish);
+
+  }
+  method2(){
+    this.topla(5,10);
+    this.name;
+    this.price; // method ve değişkenlere erişim sağlandı
+  }
+}
 
   name="Emir";
   isUser=true;
@@ -21,7 +91,7 @@ export class AppComponent {
     let city:string="Istanbul";
     console.log(`city: ${city}`);
   }
-  /*
+
   createdDare:Date=new Date();
   names:string[]=["Emir","Dilay","Eren"];
   isUsers:boolean[]=[true,false,true,false];
@@ -35,4 +105,4 @@ export class AppComponent {
     (this.type1 as number).toFixed(); //hata vermez çünkü tür kontrolü yapıldı
   }
 */
-}
+
