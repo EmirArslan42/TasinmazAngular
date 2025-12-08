@@ -7,6 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tasinmaz-frontend';
+
+  save(input:string){
+    console.log(`Kaydedildi ${input}`);
+    alert(`Kaydedildi ${input}`);
+  }
+
 }
 
 interface IProduct{
@@ -26,7 +32,6 @@ class Car implements IProduct{
   sayHello(): string {
     return "Merhaba";
   }
-
 }
 
 /*

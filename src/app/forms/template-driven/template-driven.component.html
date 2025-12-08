@@ -1,0 +1,31 @@
+<form #saveForm="ngForm" (ngSubmit)="save(saveForm)">
+
+<label for="username">UserName: </label>
+<input type="text" name="username" id="username" [ngModel]="loginModel.username">
+<br>
+<label for="password">Password: </label>
+<input type="password" name="passworrd" id="password" [ngModel]="loginModel.password">
+<br>
+<label for="rememberMe">rememberMe: </label>
+<input type="checkbox" name="rememberMe" [ngModel]="loginModel.rememberMe">
+<br>
+<button type="submit">Giriş</button>
+
+</form>
+
+
+
+<!-- 
+<form (ngSubmit)="save()">
+
+<label for="username">UserName: </label>
+<input type="text" name="username" id="username" [(ngModel)]="loginModel.username">
+<br>
+<label for="password">Password: </label>
+<input type="password" name="passworrd" id="password" [(ngModel)]="loginModel.password">
+<br>
+<button type="submit">Giriş</button>
+
+</form>
+
+-->

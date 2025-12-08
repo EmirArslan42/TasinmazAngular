@@ -13,8 +13,16 @@ import {FormsModule} from "@angular/forms";
 import { NgOnchangeHookComponent } from './pages/ng-onchange-hook/ng-onchange-hook.component';
 import { NgforComponent } from './directives/ngfor/ngfor.component';
 import { NgIfComponent } from './directives/ng-if/ng-if.component';
-import { NgSwitchComponent } from './directives/ng-switch/ng-switch.component'
+import { NgSwitchComponent } from './directives/ng-switch/ng-switch.component';
+import { NgClassComponent } from './directives/ng-class/ng-class.component';
+import { NgStyleComponent } from './directives/ng-style/ng-style.component';
+import { NgModelComponent } from './directives/ng-model/ng-model.component';
+import { CustomDirective } from './directives/custom.directive';
+import { PipeComponent } from './pipes/pipe/pipe.component';
+import { UpperPipe } from './pipes/upper.pipe';
+import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component'
 
+//Component-Directive-Pipe eklemeleri burada yapılır
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +36,13 @@ import { NgSwitchComponent } from './directives/ng-switch/ng-switch.component'
     NgforComponent,
     NgIfComponent,
     NgSwitchComponent,
+    NgClassComponent,
+    NgStyleComponent,
+    NgModelComponent,
+    CustomDirective,
+    PipeComponent,
+    UpperPipe,
+    TemplateDrivenComponent,
   ],
   imports: [
     BrowserModule,
