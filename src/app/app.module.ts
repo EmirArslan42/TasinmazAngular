@@ -9,7 +9,7 @@ import { Example3Component } from './pages/example3/example3.component';
 import { EventClickComponent } from './pages/event-click/event-click.component';
 import { DatapassInputComponent } from './pages/datapass-input/datapass-input.component';
 import { TwoWayBindingComponent } from './pages/two-way-binding/two-way-binding.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NgOnchangeHookComponent } from './pages/ng-onchange-hook/ng-onchange-hook.component';
 import { NgforComponent } from './directives/ngfor/ngfor.component';
 import { NgIfComponent } from './directives/ng-if/ng-if.component';
@@ -20,7 +20,9 @@ import { NgModelComponent } from './directives/ng-model/ng-model.component';
 import { CustomDirective } from './directives/custom.directive';
 import { PipeComponent } from './pipes/pipe/pipe.component';
 import { UpperPipe } from './pipes/upper.pipe';
-import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component'
+import { TemplateDrivenComponent } from './forms/template-driven/template-driven.component';
+import { ReactiveComponent } from './forms/reactive/reactive.component';
+import { ReactiveType2Component } from './forms/reactive-type2/reactive-type2.component'
 
 //Component-Directive-Pipe eklemeleri burada yapılır
 @NgModule({
@@ -43,11 +45,15 @@ import { TemplateDrivenComponent } from './forms/template-driven/template-driven
     PipeComponent,
     UpperPipe,
     TemplateDrivenComponent,
+    ReactiveComponent,
+    ReactiveType2Component,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
