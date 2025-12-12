@@ -10,7 +10,7 @@ export class AdminLayoutComponent {
 
   ngOnInit() {}
 
-  isHomePage():boolean{
-    return location.pathname =="/";
+  isAdminHomePage():boolean{
+    return location.pathname =="/admin";
   }
 }

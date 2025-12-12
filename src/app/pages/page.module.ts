@@ -8,6 +8,10 @@ import { HeaderComponent } from './nav/header/header.component'
 import { AppRoutingModule } from "src/app/app-routing.module";
 import { LayoutComponent } from './layout/layout.component';
 import { RouterModule } from '@angular/router';
+import { LeftMenuComponent } from './menu/left-menu/left-menu.component';
+import { FirstComponent } from './first/first.component';
+import { HttpClientModule } from "@angular/common/http"
+import { OrnekComponent } from '../ornek/ornek.component';
 
 @NgModule({
   declarations: [
@@ -17,15 +21,19 @@ import { RouterModule } from '@angular/router';
     ContactComponent,
     HeaderComponent,
     LayoutComponent,
+    LeftMenuComponent,
+    FirstComponent,
+    OrnekComponent
   ],
-  imports: [CommonModule,RouterModule],
+  imports: [CommonModule,RouterModule,HttpClientModule],
   exports:[
     HomeComponent,
     AboutComponent,
     GalleryComponent,
     ContactComponent,
     HeaderComponent,
-    
+    FirstComponent,
+    OrnekComponent
   ]
 })
 export class PageModule {}

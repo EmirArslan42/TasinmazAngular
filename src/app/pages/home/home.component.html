@@ -1,1 +1,20 @@
-<h3>Anasayfa</h3>
+<!-- <h3>Anasayfa</h3>
+<p>Id: {{user?.id}}</p>
+<p>userId: {{user?.userId}}</p>
+<p>title: {{user?.title}}</p>
+<p>completed: {{user?.completed}}</p> -->
+
+<app-ornek></app-ornek>
+
+<div *ngIf="isLoading">
+    <div class="d-flex justify-content-center">
+         <div class="spinner-border" role="status"></div>
+    </div>
+</div>
+
+<div class="alert alert-info" *ngFor="let post of postList">id: {{post.id}} userId: {{post.userId}} title:
+    {{post.title}} body: {{post.body}}</div>
+
+
+
+<!-- <app-first></app-first> -->
