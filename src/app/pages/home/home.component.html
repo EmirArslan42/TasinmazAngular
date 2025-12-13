@@ -4,6 +4,7 @@
 <p>title: {{user?.title}}</p>
 <p>completed: {{user?.completed}}</p> -->
 
+
 <app-ornek></app-ornek>
 
 <div *ngIf="isLoading">
@@ -12,8 +13,7 @@
     </div>
 </div>
 
-<div class="alert alert-info" *ngFor="let post of postList">id: {{post.id}} userId: {{post.userId}} title:
-    {{post.title}} body: {{post.body}}</div>
+<div class="alert alert-info" *ngFor="let post of postList">{{post}}</div>
 
 
 

@@ -244,13 +244,13 @@ export class HomeComponent implements OnInit {
 //}
 
 user:User | undefined;
-postList:Post[]=[];
+postList:string[]=[];
 isLoading:boolean=true;
 
 constructor(private myService: MyserviceService,private jsonPlaceHolderService:JsonplaceholderserviceService) {}
 
   ngOnInit(): void {    
-      this.jsonPlaceHolderService.getPostList().subscribe((x) => {
+      this.jsonPlaceHolderService.getPostList(3,15).subscribe((x) => {
         //console.log(x);
         this.postList=x
         this.isLoading=false;

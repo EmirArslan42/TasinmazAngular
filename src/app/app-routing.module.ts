@@ -9,6 +9,9 @@ import { MemberComponent } from './admin-pages/member/member.component';
 import { ReportComponent } from './admin-pages/report/report.component';
 import { LayoutComponent } from './pages/layout/layout.component';
 import { AdminLayoutComponent } from './admin-pages/admin-layout/admin-layout.component';
+import { AComponent } from './pages/resolver/a/a.component';
+import { BComponent } from './pages/resolver/b/b.component';
+import { FirstresolverResolver } from './firstresolver.resolver';
 
 const routes: Routes = [
   {
@@ -19,6 +22,8 @@ const routes: Routes = [
       { path: 'hakkimizda', component: AboutComponent },
       { path: 'iletisim', component: ContactComponent },
       { path: 'galeri', component: GalleryComponent },
+      { path: 'a', component: AComponent },
+      { path: 'b', component: BComponent,resolve:{postList:FirstresolverResolver} },
     ],
   },
 

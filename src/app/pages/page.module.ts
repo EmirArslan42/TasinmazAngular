@@ -12,6 +12,13 @@ import { LeftMenuComponent } from './menu/left-menu/left-menu.component';
 import { FirstComponent } from './first/first.component';
 import { HttpClientModule } from "@angular/common/http"
 import { OrnekComponent } from '../ornek/ornek.component';
+import { ɵInternalFormsSharedModule, ReactiveFormsModule } from "@angular/forms";
+import { SearchComponent } from './search/search.component';
+import { CuurencyoneComponent } from './curreny/cuurencyone/cuurencyone.component';
+import { CuurencytwoComponent } from './curreny/cuurencytwo/cuurencytwo.component';
+import { AComponent } from './resolver/a/a.component';
+import { BComponent } from './resolver/b/b.component';
+
 
 @NgModule({
   declarations: [
@@ -23,9 +30,14 @@ import { OrnekComponent } from '../ornek/ornek.component';
     LayoutComponent,
     LeftMenuComponent,
     FirstComponent,
-    OrnekComponent
+    OrnekComponent,
+    SearchComponent,
+    CuurencyoneComponent,
+    CuurencytwoComponent,
+    AComponent,
+    BComponent,
   ],
-  imports: [CommonModule,RouterModule,HttpClientModule],
+  imports: [CommonModule, RouterModule, HttpClientModule, ɵInternalFormsSharedModule, ReactiveFormsModule],
   exports:[
     HomeComponent,
     AboutComponent,
@@ -33,7 +45,10 @@ import { OrnekComponent } from '../ornek/ornek.component';
     ContactComponent,
     HeaderComponent,
     FirstComponent,
-    OrnekComponent
+    OrnekComponent,
+    SearchComponent,
+    CuurencyoneComponent,
+    CuurencytwoComponent,
   ]
 })
 export class PageModule {}

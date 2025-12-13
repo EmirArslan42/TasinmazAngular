@@ -1,1 +1,8 @@
 <h3>Galeri</h3>
+<select [formControl]="selectCurrency">
+    <option value={{currency}} *ngFor="let currency of currencyList">{{currency}}</option>
+</select>
+
+<app-cuurencyone></app-cuurencyone>
+<hr>
+<app-cuurencytwo></app-cuurencytwo>
